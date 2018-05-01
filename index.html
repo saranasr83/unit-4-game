@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cupcakes Collector</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1 class="title">Cupcakes Collector</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div>
+                    <p id="generated-num">?</p>
+                </div>
+                <div class="col-md-1">
+                    <p>Wins
+                        <span id="wins">0</span>
+                    </p>
+                </div>
+                <div class="col-md-1">
+                    <p>Losses
+                        <span id="losses">0</span>
+                    </p>
+                </div>
+
+            </div>
+            <div class="col-md-7">
+                <img class="img-1" src="assets/images/desserts.jpg" alt="desserts">
+                <p class="p-1">You will be given a random number at the start of the game.
+                    <br> There are four cupcakes below. bY clicking on a cupcake you will add a specific amount of points to
+                    your tital score.
+                    <br> You win the game by matching your total score to random number, you lose the game if your total score
+                    goes above the random number.
+                    <br> The value of each cupcake is hidden from you until you click on it.
+                    <br> Each time when the game starts, the game will change the values of each cupcake.
+                </p>
+            </div>
+            <div class="col-md-2">
+                <p>Total Score:
+                    <span id="total-score">0</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="row">
+            <div class="col-md-3">
+                <img id="cupcake-1" src="assets/images/cupcake-1.jpg" alt="cupcake-1">
+            </div>
+            <div class="col-md-3">
+                <img id="cupcake-2" src="assets/images/cupcake-2.jpg" alt="cupcake-2">
+            </div>
+            <div class="col-md-3">
+                <img id="cupcake-3" src="assets/images/cupcake-3.jpg" alt="cupcake-3">
+            </div>
+            <div class="col-md-3">
+                <img id="cupcake-4" src="assets/images/cupcake-4.jpg" alt="cupcake-4">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        });
+
+    </script>
+</body>
+
+</html>
