@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -38,7 +38,7 @@
             <div class="col-md-7">
                 <img class="img-1" src="assets/images/desserts.jpg" alt="desserts">
                 <p class="p-1">You will be given a random number at the start of the game.
-                    <br> There are four cupcakes below. bY clicking on a cupcake you will add a specific amount of points to
+                    <br> There are four cupcakes below. By clicking on a cupcake you will add a specific amount of points to
                     your tital score.
                     <br> You win the game by matching your total score to random number, you lose the game if your total score
                     goes above the random number.
@@ -49,6 +49,8 @@
             <div class="col-md-2">
                 <p>Total Score:
                     <span id="total-score">0</span>
+                    <br>
+                    <span id="result"></span>
                 </p>
             </div>
         </div>
@@ -56,24 +58,22 @@
     <div class="container-2">
         <div class="row">
             <div class="col-md-3">
-                <img id="cupcake-1" src="assets/images/cupcake-1.jpg" alt="cupcake-1">
+                <img id="cupcake-1" src="assets/images/cupcake-1.jpg" alt="cupcake-1" class="cupcake">
             </div>
             <div class="col-md-3">
-                <img id="cupcake-2" src="assets/images/cupcake-2.jpg" alt="cupcake-2">
+                <img id="cupcake-2" src="assets/images/cupcake-2.jpg" alt="cupcake-2" class="cupcake">
             </div>
             <div class="col-md-3">
-                <img id="cupcake-3" src="assets/images/cupcake-3.jpg" alt="cupcake-3">
+                <img id="cupcake-3" src="assets/images/cupcake-3.jpg" alt="cupcake-3" class="cupcake">
             </div>
             <div class="col-md-3">
-                <img id="cupcake-4" src="assets/images/cupcake-4.jpg" alt="cupcake-4">
+                <img id="cupcake-4" src="assets/images/cupcake-4.jpg" alt="cupcake-4" class="cupcake">
             </div>
         </div>
     </div>
 
     <script type="text/javascript">
-        $(document).ready(function () {
-
-        });
+        
 
     </script>
 </body>
