@@ -4,7 +4,7 @@ $(document).ready(function () {
     var gameData = {
         wins: 0,
         losses: 0,
-        randomNum: 0,
+        randomTargetNum: 0,
         currentSum: 0,
         scoreSoFar: 0,
         targetNumber: 0
@@ -29,9 +29,9 @@ $(document).ready(function () {
 
         // The player will be shown a random number at the start of the game.
         //The random number shown at the start of the game should be between 19 - 120.
-        randomTargetNum = Math.floor(Math.random() * 102) + 19
-        console.log("TargetNum:" + randomTargetNum);
-        $("#generated-num").html(randomTargetNum);
+        gameData.randomTargetNum = Math.floor(Math.random() * 102) + 19
+        console.log("TargetNum:" + gameData.randomTargetNum);
+        $("#generated-num").html(gameData.randomTargetNum);
 
         // // When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
         gameData.currentSum = 0
@@ -61,21 +61,26 @@ $(document).ready(function () {
         // When they do click one, update the player's score counter.
         $("#total-score").html(gameData.currentSum);
         // The player wins if their total score matches the random number from the beginning of the game.
-        if (gameData.currentSum === randomTargetNum) {
+        if (gameData.currentSum === gameData.randomTargetNum) {
             console.log("WIN!!resetting game");
             gameData.wins++
             $("#wins").html(gameData.wins)
-            alert('Yoohoo, You Won!');
+            console.log('Yoohoo, You Won!');
+            $("#alertMessage").removeClass("hide");
+            $("#message").text('Yoohoo, You Won! the target number was '+gameData.randomTargetNum+ " and your score was " + gameData.currentSum +" !");
             setupGame();
         }
         // The player loses if their score goes above the random number.
-        else if (gameData.currentSum > randomTargetNum) {
+        else if (gameData.currentSum > gameData.randomTargetNum) {
             console.log("LOSE!!resetting game");            
             gameData.losses++
             $("#losses").html(gameData.losses)
-            alert('Oh, You Lost!');
-
+            console.log('Oh, You Lost!');
+            $("#alertMessage").removeClass("hide");
+            $("#message").text('Oh, You Lost! the target number was '+gameData.randomTargetNum+ " and your score was " + gameData.currentSum +" !");
             setupGame();
+
+            
         }
         // The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
         // updateWinLoss();
@@ -89,19 +94,27 @@ $(document).ready(function () {
         //now, whenever one of the cupcake is clicked on, 
         //  run one round of the game:
         $("#cupcake-1").click(function () {
+            $("#alertMessage").addClass("hide");
+            $("#message").text("");
             console.log("cupcake-1 is clocked on");
             console.log("calling playRound() with value pic:", parseInt($("#cupcake-1").val()));
             playRound(parseInt($("#cupcake-1").val()));
         });
         $("#cupcake-2").click(function () {
+            $("#alertMessage").addClass("hide");
+            $("#message").text("");
             console.log("cupcake-2 is clocked on");
             playRound(parseInt($("#cupcake-2").val()));
         });
         $("#cupcake-3").click(function () {
+            $("#alertMessage").addClass("hide");
+            $("#message").text("");
             console.log("cupcake-3 is clocked on");
             playRound(parseInt($("#cupcake-3").val()));
         });
         $("#cupcake-4").click(function () {
+            $("#alertMessage").addClass("hide");
+            $("#message").text("");
             console.log("cupcake-4 is clocked on");
             playRound(parseInt($("#cupcake-4").val()));
         });
